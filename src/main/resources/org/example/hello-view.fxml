@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane"
+            maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="441.0"
+            prefWidth="632.0"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.ui.HelloController">
+
+    <HBox alignment="CENTER" layoutX="201.0" layoutY="221.0" prefHeight="50.0" prefWidth="237.0" spacing="10.0">
+        <Button fx:id="btnA" onAction="#comprobarLetra" text="A" />
+        <Button fx:id="btnB" onAction="#comprobarLetra" text="B" />
+        <Button fx:id="btnC" onAction="#comprobarLetra" text="C" />
+        <Button fx:id="btnD" onAction="#comprobarLetra" text="D" />
+        <Button fx:id="btnE" onAction="#comprobarLetra" text="E" />
+        <Button fx:id="btnF" onAction="#comprobarLetra" text="F" />
+        <Button fx:id="btnG" onAction="#comprobarLetra" text="G" />
+    </HBox>
+    <HBox alignment="CENTER" layoutX="209.0" layoutY="273.0" spacing="10.0">
+        <Button fx:id="btnH" onAction="#comprobarLetra" text="H" />
+        <Button fx:id="btnI" onAction="#comprobarLetra" text="I" />
+        <Button fx:id="btnJ" onAction="#comprobarLetra" text="J" />
+        <Button fx:id="btnK" onAction="#comprobarLetra" text="K" />
+        <Button fx:id="btnL" onAction="#comprobarLetra" text="L" />
+        <Button fx:id="btnM" onAction="#comprobarLetra" text="M" />
+        <Button fx:id="btnN" onAction="#comprobarLetra" text="N" />
+    </HBox>
+    <HBox alignment="CENTER" layoutX="205.0" layoutY="311.0" spacing="10.0">
+        <Button fx:id="btnO" onAction="#comprobarLetra" text="O" />
+        <Button fx:id="btnP" onAction="#comprobarLetra" text="P" />
+        <Button fx:id="btnQ" onAction="#comprobarLetra" text="Q" />
+        <Button fx:id="btnR" onAction="#comprobarLetra" text="R" />
+        <Button fx:id="btnS" onAction="#comprobarLetra" text="S" />
+        <Button fx:id="btnT" onAction="#comprobarLetra" text="T" />
+        <Button fx:id="btnU" onAction="#comprobarLetra" text="U" />
+    </HBox>
+    <HBox alignment="CENTER" layoutX="240.0" layoutY="347.0" spacing="10.0">
+        <Button fx:id="btnV" onAction="#comprobarLetra" text="V" />
+        <Button fx:id="btnW" onAction="#comprobarLetra" text="W" />
+        <Button fx:id="btnX" onAction="#comprobarLetra" text="X" />
+        <Button fx:id="btnY" onAction="#comprobarLetra" text="Y" />
+        <Button fx:id="btnZ" onAction="#comprobarLetra" text="Z" />
+    </HBox>
+    <Label fx:id="incognita" alignment="CENTER" layoutX="22.0" layoutY="182.0" prefHeight="38.0" prefWidth="589.0">
+        <font>
+            <Font size="26.0" />
+        </font>
+    </Label>
+    <Button fx:id="nuevaPalabraButton" layoutX="281.0" layoutY="138.0" mnemonicParsing="false" onAction="#nuevaPalabra" text="Nueva palabra">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </Button>
+    <ChoiceBox fx:id="categoriaChoiceMenu" layoutX="354.0" layoutY="94.0" prefWidth="150.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Overwatch" />
+                <String fx:value="Pokemon" />
+                <String fx:value="Country" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Label layoutX="402.0" layoutY="77.0" text="Categoria" />
+    <Label layoutX="192.0" layoutY="77.0" text="Nivel" />
+    <ChoiceBox fx:id="nivelChoiceMenu" layoutX="134.0" layoutY="94.0" prefWidth="150.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="1" />
+                <String fx:value="2" />
+                <String fx:value="3" />
+                <String fx:value="4" />
+                <String fx:value="5" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Label layoutX="255.0" layoutY="34.0" text="AHORCADO">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="148.0" layoutY="400.0" text="Adivinar Palabra:" />
+    <Button fx:id="adivinarPalabraButton" layoutX="410.0" layoutY="398.0" mnemonicParsing="false" onAction="#adivinarPalabraEntera" text="Advinar">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </Button>
+    <TextField fx:id="intentoDeAdivinarTextField" layoutX="242.0" layoutY="396.0" onAction="#adivinarPalabraEntera" />
+    <ImageView fx:id="imagen" fitHeight="157.0" fitWidth="130.0" layoutX="476.0" layoutY="231.0" />
+</AnchorPane>

@@ -1,0 +1,229 @@
+3;Sandslash;pokemon
+4;Hitmonchan;pokemon
+2;Vulpix;pokemon
+2;Goldeen;pokemon
+2;Hypno;pokemon
+3;Nidoqueen;pokemon
+2;Seaking;pokemon
+3;Squirtle;pokemon
+2;Lapras;pokemon
+2;Ivysaur;pokemon
+2;Flareon;pokemon
+1;Seel;pokemon
+2;Golduck;pokemon
+3;Slowpoke;pokemon
+2;Machoke;pokemon
+2;Mewtwo;pokemon
+4;Charmeleon;pokemon
+2;Slowbro;pokemon
+2;Poliwag;pokemon
+3;Pidgeotto;pokemon
+3;Nidorina;pokemon
+3;Mr. Mime;pokemon
+3;Charizard;pokemon
+3;Magikarp;pokemon
+2;Pinsir;pokemon
+2;Kadabra;pokemon
+3;Clefable;pokemon
+4;Wigglytuff;pokemon
+3;Kabutops;pokemon
+3;Graveler;pokemon
+2;Seadra;pokemon
+4;Electabuzz;pokemon
+3;Venusaur;pokemon
+3;Primeape;pokemon
+2;Haunter;pokemon
+3;Nidoking;pokemon
+2;Porygon;pokemon
+4;Bellsprout;pokemon
+3;Lickitung;pokemon
+4;Kangaskhan;pokemon
+3;Clefairy;pokemon
+2;Gengar;pokemon
+3;Bulbasaur;pokemon
+2;Venonat;pokemon
+3;Hitmonlee;pokemon
+2;Gastly;pokemon
+2;Arbok;pokemon
+1;Mew;pokemon
+2;Voltorb;pokemon
+2;Nidoran;pokemon
+3;Exeggcute;pokemon
+2;Pikachu;pokemon
+2;Rhydon;pokemon
+4;Weepinbell;pokemon
+2;Metapod;pokemon
+2;Gloom;pokemon
+4;Victreebel;pokemon
+2;Kabuto;pokemon
+3;Gyarados;pokemon
+3;Exeggutor;pokemon
+3;Raticate;pokemon
+4;Charmander;pokemon
+2;Pidgeot;pokemon
+2;Psyduck;pokemon
+2;Omastar;pokemon
+2;Magmar;pokemon
+3;Sandshrew;pokemon
+2;Moltres;pokemon
+3;Vileplume;pokemon
+2;Diglett;pokemon
+2;Oddish;pokemon
+3;Magneton;pokemon
+3;Poliwhirl;pokemon
+2;Golbat;pokemon
+2;Horsea;pokemon
+2;Chansey;pokemon
+2;Rattata;pokemon
+2;Kingler;pokemon
+2;Koffing;pokemon
+1;Muk;pokemon
+2;Machamp;pokemon
+4;Farfetch'd;pokemon
+2;Paras;pokemon
+2;Mankey;pokemon
+2;Dodrio;pokemon
+3;Tentacool;pokemon
+3;Dragonair;pokemon
+2;Dratini;pokemon
+2;Dugtrio;pokemon
+1;Onix;pokemon
+3;Ninetales;pokemon
+2;Eevee;pokemon
+3;Beedrill;pokemon
+5;Macedonia, the former Yugoslav Republic of;country
+4;Burkina Faso;country
+1;Peru;country
+2;Serbia;country
+3;Eswatini;country
+4;Mozambique;country
+5;Saint Vincent and the Grenadines;country
+4;Bangladesh;country
+2;Armenia;country
+5;Congo, Democratic Republic of the;country
+5;Bolivia (Plurinational State of);country
+5;United Kingdom of Great Britain and Northern Ireland;country
+2;Morocco;country
+5;Brunei Darussalam;country
+4;Costa Rica;country
+5;Moldova, Republic of;country
+5;Korea (Democratic People's Republic of);country
+2;Zambia;country
+2;Panama;country
+2;Germany;country
+2;Samoa;country
+2;Poland;country
+1;Cuba;country
+3;Lithuania;country
+3;Honduras;country
+2;Japan;country
+3;Cambodia;country
+4;Mauritania;country
+2;Greece;country
+2;Malawi;country
+4;El Salvador;country
+3;Barbados;country
+2;Turkey;country
+2;Iceland;country
+3;Bulgaria;country
+3;Ethiopia;country
+3;Kiribati;country
+3;Slovenia;country
+2;Ghana;country
+4;South Africa;country
+5;Lao People's Democratic Republic;country
+1;Togo;country
+3;Botswana;country
+2;Ukraine;country
+2;Hungary;country
+5;Marshall Islands;country
+4;Madagascar;country
+2;Benin;country
+5;Central African Republic;country
+2;Denmark;country
+4;South Sudan;country
+5;Trinidad and Tobago;country
+2;Algeria;country
+2;Belarus;country
+4;Uzbekistan;country
+5;Saint Kitts and Nevis;country
+2;Grenada;country
+2;Romania;country
+5;Russian Federation;country
+5;C√¥te d'Ivoire;country
+2;Cyprus;country
+2;Nigeria;country
+2;Guinea;country
+2;Bahrain;country
+2;Nepal;country
+2;Uruguay;country
+4;Philippines;country
+2;Eritrea;country
+2;Chile;country
+4;Kazakhstan;country
+3;Singapore;country
+4;Saint Lucia;country
+2;India;country
+3;Cameroon;country
+2;Norway;country
+3;Portugal;country
+4;San Marino;country
+2;Mexico;country
+2;Comoros;country
+3;Slovakia;country
+5;Equatorial Guinea;country
+2;China;country
+5;Syrian Arab Republic;country
+2;Niger;country
+2;Nauru;country
+3;Argentina;country
+5;Sao Tome and Principe;country
+3;Zimbabwe;country
+2;Lesotho;country
+3;Djibouti;country
+5;Solomon Islands;country
+5;Liechtenstein;country
+5;Antigua and Barbuda;country
+2;Vanuatu;country
+2;Belgium;country
+2;Palau;country
+1;Fiji;country
+2;Gambia;country
+2;Congo;country
+5;Korea, Republic of;country
+2;Kuwait;country
+4;Kyrgyzstan;country
+2;Israel;country
+2;Burundi;country
+4;Netherlands;country
+2;Haiti;country
+4;Cabo Verde;country
+2;Angola;country
+2;Spain;country
+2;Hanzo;overwatch
+1;Ana;overwatch
+3;Reinhardt;overwatch
+2;Moira;overwatch
+2;Tracer;overwatch
+2;Roadhog;overwatch
+4;Soldier 76;overwatch
+3;Zenyatta;overwatch
+2;Winston;overwatch
+5;Wrecking Ball;overwatch
+2;Orisa;overwatch
+3;Symmetra;overwatch
+3;Doomfist;overwatch
+3;Torbjorn;overwatch
+2;Sombra;overwatch
+2;Reaper;overwatch
+2;Lucio;overwatch
+2;Mercy;overwatch
+2;Pharah;overwatch
+1;Mei;overwatch
+2;McCree;overwatch
+2;Zarya;overwatch
+2;Bastion;overwatch
+2;Junkrat;overwatch
+2;Genji;overwatch
+1;D.va;overwatch
+4;Widowmaker;overwatch
