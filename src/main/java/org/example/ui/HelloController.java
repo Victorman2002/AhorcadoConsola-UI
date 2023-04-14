@@ -1,16 +1,21 @@
 package org.example.ui;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import org.example.domain.Juego;
 import org.example.service.GestionJuego;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
@@ -31,76 +36,61 @@ public class HelloController implements Initializable {
     public TextField intentoDeAdivinarTextField;
 
     @FXML
-    public Button btnA;
-    @FXML
-    public Button btnB;
-    @FXML
-    public Button btnC;
-    @FXML
-    public Button btnD;
-    @FXML
-    public Button btnE;
-    @FXML
-    public Button btnF;
-    @FXML
-    public Button btnG;
-    @FXML
-    public Button btnH;
-    @FXML
-    public Button btnI;
-    @FXML
-    public Button btnJ;
-    @FXML
-    public Button btnK;
-    @FXML
-    public Button btnL;
-    @FXML
-    public Button btnM;
-    @FXML
-    public Button btnN;
-    @FXML
-    public Button btnO;
-    @FXML
-    public Button btnP;
-    @FXML
-    public Button btnQ;
-    @FXML
-    public Button btnR;
-    @FXML
-    public Button btnS;
-    @FXML
-    public Button btnT;
-    @FXML
-    public Button btnU;
-    @FXML
-    public Button btnV;
-    @FXML
-    public Button btnW;
-    @FXML
-    public Button btnX;
-    @FXML
-    public Button btnY;
-    @FXML
-    public Button btnZ;
-    @FXML
     public AnchorPane anchorPane;
     @FXML
     public ImageView imagen;
 
-    GestionJuego gestionJuego = new GestionJuego();
+    @FXML
+    public HBox botones1;
+    @FXML
+    public HBox botones2;
+    @FXML
+    public HBox botones3;
+    @FXML
+    public HBox botones4;
 
+    GestionJuego gestionJuego = new GestionJuego();
+    private final List<Button> listaBotones = FXCollections.observableArrayList();
+    private ArrayList<Boolean> botonesPulsados = new ArrayList<>();
     Juego juego = null;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Guardar todos los botones del FXML en un Array.
+        for (Node nodo : botones1.getChildren()) {
+            if (nodo instanceof Button) {
+                listaBotones.add((Button) nodo);
+            }
+        }
+        for (Node nodo : botones2.getChildren()) {
+            if (nodo instanceof Button) {
+                listaBotones.add((Button) nodo);
+            }
+        }
+        for (Node nodo : botones3.getChildren()) {
+            if (nodo instanceof Button) {
+                listaBotones.add((Button) nodo);
+            }
+        }
+        for (Node nodo : botones4.getChildren()) {
+            if (nodo instanceof Button) {
+                listaBotones.add((Button) nodo);
+            }
+        }
+
+        //Inicializo el array de booleanos
+        for (int i = 0; i < 26; i++) {
+            botonesPulsados.add(false);
+        }
 
         //Recuperar partida anterior
         juego = gestionJuego.leerJuegoFichero();
         //Añadimos la incognita que ha generado la clase Juego al Label que verá el usuario
         incognita.setText(juego.getLetrasDescubiertas());
-
-        //Reinicio el marcador de intentos
-
+        //Coger la imagen de la partida anterior en el caso de que la haya
+        imagen.setImage(new Image("File:src/main/resources/org/example/ahorcado" + juego.getIntentos() + ".png"));
+        //Recupero el estado anterior de los botones
+        retomarEstadoBotones();
     }
 
     public void nuevaPalabra() {
@@ -133,9 +123,9 @@ public class HelloController implements Initializable {
 
     }
 
-    public void comprobarLetra(ActionEvent actionEvent) {
+    public void onLetraPulsada(ActionEvent actionEvent) {
 
-        //Cojo el boton que ha llamado al metodo
+        //Cojo el boton que ha llamado al método
         Button boton = (Button) actionEvent.getSource();
 
         //Y cojo su contenido
@@ -145,7 +135,7 @@ public class HelloController implements Initializable {
         //Cálculo si pulsado está en la palabra para que cambie en la clase Juego
         juego.calcularLetrasDescubiertas(letra);
 
-        //Actualizo el Label de la Incognita tras hacer la comprobacion
+        //Actualizo el Label de la Incognita tras hacer la comprobación
         incognita.setText(juego.getLetrasDescubiertas());
 
         //Comprobar si la letra esta, si lo está el boton se vuelve verde y sino rojo
@@ -165,6 +155,13 @@ public class HelloController implements Initializable {
             finIntentos();
         }
 
+        //Cojo la posicion del boton en el abecedario y lo pongo en dicha posicion como true (pulsado)
+        //en el array booleanos de botones pulsados.
+        botonesPulsados = (ArrayList<Boolean>) juego.getBotones();
+        botonesPulsados.set(boton.getText().charAt(0) - 65, true);
+        juego.setBotones(botonesPulsados);
+
+        //Guardo el estado del juego tras que se haya pulsado el boton
         gestionJuego.escribirJuegoFichero(juego);
 
     }
@@ -205,59 +202,20 @@ public class HelloController implements Initializable {
         nuevaPalabra();
     }
 
+    public void retomarEstadoBotones() {
+        List<Boolean> botonesPulsados = juego.getBotones();
+        for (int i = 0; i < botonesPulsados.size(); i++) {
+            if (botonesPulsados.get(i)) {
+                listaBotones.get(i).setDisable(true);
+            }
+        }
+    }
+
     public void reiniciarBotones() {
-        btnA.setDisable(false);
-        btnA.setStyle("");
-        btnB.setDisable(false);
-        btnB.setStyle("");
-        btnC.setDisable(false);
-        btnC.setStyle("");
-        btnD.setDisable(false);
-        btnD.setStyle("");
-        btnE.setDisable(false);
-        btnE.setStyle("");
-        btnF.setDisable(false);
-        btnF.setStyle("");
-        btnG.setDisable(false);
-        btnG.setStyle("");
-        btnH.setDisable(false);
-        btnH.setStyle("");
-        btnI.setDisable(false);
-        btnI.setStyle("");
-        btnJ.setDisable(false);
-        btnJ.setStyle("");
-        btnK.setDisable(false);
-        btnK.setStyle("");
-        btnL.setDisable(false);
-        btnL.setStyle("");
-        btnM.setDisable(false);
-        btnM.setStyle("");
-        btnN.setDisable(false);
-        btnN.setStyle("");
-        btnO.setDisable(false);
-        btnO.setStyle("");
-        btnP.setDisable(false);
-        btnP.setStyle("");
-        btnQ.setDisable(false);
-        btnQ.setStyle("");
-        btnR.setDisable(false);
-        btnR.setStyle("");
-        btnS.setDisable(false);
-        btnS.setStyle("");
-        btnT.setDisable(false);
-        btnT.setStyle("");
-        btnU.setDisable(false);
-        btnU.setStyle("");
-        btnV.setDisable(false);
-        btnV.setStyle("");
-        btnW.setDisable(false);
-        btnW.setStyle("");
-        btnX.setDisable(false);
-        btnX.setStyle("");
-        btnY.setDisable(false);
-        btnY.setStyle("");
-        btnZ.setDisable(false);
-        btnZ.setStyle("");
+        for (Button boton : listaBotones) {
+            boton.setDisable(false);
+            boton.setStyle("");
+        }
     }
 
 }

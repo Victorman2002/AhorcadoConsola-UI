@@ -1,8 +1,10 @@
 package org.example.domain;
 
+import javafx.scene.control.Button;
 import org.example.dao.elemento.ImplementacionDaoElementos;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -11,11 +13,15 @@ public class Juego implements Serializable {
     private Elemento elementoAdivinar;
     private String letrasDescubiertas;
     private int intentos;
+    private ArrayList<Boolean> botones = new ArrayList<>();
 
     public Juego(int nivel, String categoria) {
         this.elementoAdivinar = cogerElementoAleatorio(nivel, categoria);
         this.letrasDescubiertas = ("_".repeat(elementoAdivinar.getIncognita().length()));
         this.intentos = 6;
+        for (int i = 0; i < 26; i++) {
+            this.botones.add(false);
+        }
     }
 
     public Elemento getElementoAdivinar() {
@@ -85,4 +91,11 @@ public class Juego implements Serializable {
         return this.elementoAdivinar.getIncognita().equalsIgnoreCase(palabra);
     }
 
+    public List<Boolean> getBotones() {
+        return botones;
+    }
+
+    public void setBotones(ArrayList<Boolean> botones) {
+        this.botones = botones;
+    }
 }
